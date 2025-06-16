@@ -3,71 +3,185 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Developer Journey | Portfolio</title>
     <link rel="stylesheet" href="Protfolio.css" />
-    <title>Document</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header -->
     <header class="header">
       <nav class="nav">
         <div class="nav-container">
-          <a href="#" class="logo">Portfolio</a>
+          <a href="#" class="logo">Dev<span>Journey</span></a>
           <ul class="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#learning">Learning</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
         </div>
       </nav>
     </header>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="container">
-        <div class="hero-content">
-          <h1>Welcome to My Portfolio</h1>
-          <p class="subtitle">Web Developer & Designer</p>
-          <a href="#contact" class="btn">Get in Touch</a>
+        <div class="hero-content" data-aos="fade-up">
+          <span class="hero-subtitle">Welcome to my coding journey</span>
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Your Name</span><br />Web Developer
+            in Training
+          </h1>
+          <p class="hero-description">
+            Passionate about learning web development and creating beautiful
+            websites
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">See My Work</a>
+            <a href="#contact" class="btn btn-outline">Let's Connect</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Months Learning</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2+</span>
+              <span class="stat-label">Skills Mastered</span>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="hero-shape"></div>
     </section>
+
     <!-- About Section -->
     <section id="about" class="about">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
         <div class="about-content">
-          <div class="about-image">
-            <img src="../images/111.jpg" alt="Profile Picture" />
+          <div class="about-image" data-aos="fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=500&auto=format&fit=crop&q=60"
+              alt="Profile Picture"
+            />
           </div>
-          <div class="about-text">
+          <div class="about-text" data-aos="fade-left">
             <p>
-              Hello! I'm a passionate web developer with a keen eye for design
-              and a love for creating beautiful, functional websites. I
-              specialize in front-end development and user experience design.
+              Hello! I'm a passionate beginner web developer currently learning
+              HTML, CSS, and JavaScript. I love creating websites and am excited
+              to grow my skills in web development. My goal is to become a
+              full-stack developer and create meaningful web applications.
             </p>
             <div class="skills">
-              <h3>Skills</h3>
+              <h3>Current Skills</h3>
               <ul class="skills-list">
-                <li>HTML5 & CSS3</li>
-                <li>JavaScript</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Basic JavaScript</li>
                 <li>Responsive Design</li>
-                <li>UI/UX Design</li>
+              </ul>
+            </div>
+            <div class="learning">
+              <h3>Currently Learning</h3>
+              <ul class="skills-list">
+                <li>Advanced JavaScript</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>Git & GitHub</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Learning Journey Section -->
+    <section id="learning" class="learning-journey">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">My Learning Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">January 2024</span>
+              <h3>Started Learning Web Development</h3>
+              <p>Began my journey with HTML and CSS fundamentals</p>
+              <ul class="timeline-list">
+                <li>Learned HTML structure and semantics</li>
+                <li>Mastered CSS basics and layouts</li>
+                <li>Created my first responsive website</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">February 2024</span>
+              <h3>JavaScript Basics</h3>
+              <p>Started learning JavaScript programming</p>
+              <ul class="timeline-list">
+                <li>Variables, functions, and control flow</li>
+                <li>DOM manipulation</li>
+                <li>Basic event handling</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">March 2024</span>
+              <h3>Current Focus</h3>
+              <p>Building projects and learning new technologies</p>
+              <ul class="timeline-list">
+                <li>Working on personal projects</li>
+                <li>Learning React.js basics</li>
+                <li>Improving responsive design skills</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="projects">
       <div class="container">
-        <h2 class="section-title">My Projects</h2>
+        <h2 class="section-title" data-aos="fade-up">My Projects</h2>
         <div class="projects-grid">
-          <article class="project-card">
-            <img src="../images/download.jpg" alt="Project 1" />
+          <article class="project-card" data-aos="fade-up">
+            <img
+              src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&auto=format&fit=crop&q=60"
+              alt="Personal Portfolio"
+            />
             <div class="project-content">
-              <h3>Project One</h3>
-              <p>A responsive website built with HTML and CSS.</p>
+              <h3>Personal Portfolio</h3>
+              <p>
+                My first responsive portfolio website built with HTML and CSS.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
               <div class="project-links">
                 <a href="#" class="btn btn-small">View Live</a>
                 <a href="#" class="btn btn-small btn-outline">Source Code</a>
@@ -75,11 +189,21 @@
             </div>
           </article>
 
-          <article class="project-card">
-            <img src="../images/image.jpg" alt="Project 2" />
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <img
+              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&auto=format&fit=crop&q=60"
+              alt="Todo App"
+            />
             <div class="project-content">
-              <h3>Project Two</h3>
-              <p>An interactive web application with modern design.</p>
+              <h3>Todo List App</h3>
+              <p>
+                A simple todo list application with JavaScript functionality.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
               <div class="project-links">
                 <a href="#" class="btn btn-small">View Live</a>
                 <a href="#" class="btn btn-small btn-outline">Source Code</a>
@@ -87,11 +211,23 @@
             </div>
           </article>
 
-          <article class="project-card">
-            <img src="../images/images.png" alt="Project 3" />
+          <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&auto=format&fit=crop&q=60"
+              alt="Weather App"
+            />
             <div class="project-content">
-              <h3>Project Three</h3>
-              <p>A mobile-first website with clean design.</p>
+              <h3>Weather App</h3>
+              <p>
+                A weather application that displays current weather using an
+                API.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>API</span>
+              </div>
               <div class="project-links">
                 <a href="#" class="btn btn-small">View Live</a>
                 <a href="#" class="btn btn-small btn-outline">Source Code</a>
@@ -101,26 +237,30 @@
         </div>
       </div>
     </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2 class="section-title">Get in Touch</h2>
+        <h2 class="section-title" data-aos="fade-up">Get in Touch</h2>
         <div class="contact-content">
-          <div class="contact-info">
+          <div class="contact-info" data-aos="fade-right">
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
-              <p>b.pandusir2003@gmail.com</p>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <p>+977 9749******</p>
+              <p>your.email@example.com</p>
             </div>
             <div class="contact-item">
               <i class="fas fa-map-marker-alt"></i>
-              <p>Kathmandu,Nepal</p>
+              <p>Your Location</p>
+            </div>
+            <div class="contact-text">
+              <p>
+                I'm currently looking for opportunities to learn and grow.
+                Whether you have a question or just want to say hi, I'll try my
+                best to get back to you!
+              </p>
             </div>
           </div>
-          <form class="contact-form">
+          <form class="contact-form" data-aos="fade-left">
             <div class="form-group">
               <input type="text" placeholder="Your Name" required />
             </div>
@@ -135,16 +275,77 @@
         </div>
       </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="social-links">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>Let's Learn Together</h3>
+            <p>
+              I'm always excited to connect with fellow developers and learn new
+              things!
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-newsletter">
+            <h4>Join My Learning Journey</h4>
+            <p>
+              Subscribe to get updates on my latest projects and learning
+              progress!
+            </p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit" class="btn">Subscribe</button>
+            </form>
+          </div>
         </div>
-        <p>&copy; 2024 BIBEK PANDEY. All rights reserved.</p>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Your Name. Learning and Growing as a Developer.</p>
+        </div>
       </div>
     </footer>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+
+      // Dark mode toggle
+      const themeToggle = document.querySelector(".theme-toggle");
+      themeToggle.addEventListener("click", () => {
+        document.body.dataset.theme =
+          document.body.dataset.theme === "dark" ? "light" : "dark";
+        themeToggle.querySelector("i").classList.toggle("fa-moon");
+        themeToggle.querySelector("i").classList.toggle("fa-sun");
+      });
+
+      // Image loading animation
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll("img");
+        images.forEach((img) => {
+          img.addEventListener("load", function () {
+            this.classList.add("loaded");
+          });
+          if (img.complete) {
+            img.classList.add("loaded");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
