@@ -1,0 +1,436 @@
+/* Base styles and variables */
+:root {
+  --bg-color: #fff5e6;
+  --accent-color: #ff6f61;
+  --text-color: #5a5a5a;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Floating elements animation */
+.floating-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--accent-color);
+  opacity: 0.1;
+  animation: float 8s infinite ease-in-out;
+}
+
+.circle-1 {
+  width: 150px;
+  height: 150px;
+  top: -75px;
+  left: -75px;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 100px;
+  height: 100px;
+  bottom: -50px;
+  right: -50px;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 75px;
+  height: 75px;
+  top: 50%;
+  left: 50%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+/* Container and card styles */
+.container {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+}
+
+.invitation-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px var(--shadow-color);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.invitation-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Header styles */
+.invitation-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.save-the-date {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.event-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.date-time {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.date,
+.time {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+
+/* Event details styles */
+.event-details {
+  margin: 40px 0;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 111, 97, 0.05);
+  border-radius: 15px;
+}
+
+.venue-info h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 5px;
+}
+
+.event-description {
+  text-align: center;
+  margin: 30px 0;
+  line-height: 1.6;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature i {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+/* RSVP section styles */
+.rsvp-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.rsvp-button {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rsvp-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 111, 97, 0.3);
+}
+
+.rsvp-note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/* Footer styles */
+.invitation-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(90, 90, 90, 0.1);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact-info i {
+  color: var(--accent-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .invitation-card {
+    padding: 30px 20px;
+  }
+
+  .event-title {
+    font-size: 2.5rem;
+  }
+
+  .date-time {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation for elements appearing on scroll */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.invitation-header,
+.event-details,
+.rsvp-section,
+.invitation-footer {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.invitation-header {
+  animation-delay: 0.2s;
+}
+.event-details {
+  animation-delay: 0.4s;
+}
+.rsvp-section {
+  animation-delay: 0.6s;
+}
+.invitation-footer {
+  animation-delay: 0.8s;
+}
+
+/* Instagram section styles */
+.instagram-section {
+  margin: 40px 0;
+  padding: 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 111, 97, 0.05) 0%,
+    rgba(255, 245, 230, 0.1) 100%
+  );
+  border-radius: 20px;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+.instagram-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.instagram-header i {
+  font-size: 2rem;
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.instagram-header h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+.instagram-text {
+  margin-bottom: 25px;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.instagram-details {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.instagram-handle,
+.instagram-hashtag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.instagram-handle:hover,
+.instagram-hashtag:hover {
+  transform: translateY(-3px);
+}
+
+.instagram-handle i {
+  color: #e1306c;
+}
+
+.instagram-hashtag i {
+  color: var(--accent-color);
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.preview-item {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.preview-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.preview-item i {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.preview-item span {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Update responsive design for Instagram section */
+@media (max-width: 768px) {
+  .instagram-details {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .instagram-handle,
+  .instagram-hashtag {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

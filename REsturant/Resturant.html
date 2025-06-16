@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gourmet Haven | Fine Dining Menu</title>
+    <link rel="stylesheet" href="Resturant.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="menu-container">
+      <!-- Header Section -->
+      <header class="menu-header">
+        <div class="restaurant-info">
+          <h1>Aqua kuno</h1>
+          <p class="tagline">Where Culinary Dreams Come True</p>
+          <div class="restaurant-meta">
+            <span><i class="fas fa-star"></i> 4.9/5.0</span>
+            <span><i class="fas fa-clock"></i> Open Now</span>
+            <span><i class="fas fa-map-marker-alt"></i> Downtown</span>
+          </div>
+        </div>
+        <div class="menu-categories">
+          <button class="category-btn active" data-category="all">All</button>
+          <button class="category-btn" data-category="starters">
+            Starters
+          </button>
+          <button class="category-btn" data-category="mains">
+            Main Course
+          </button>
+          <button class="category-btn" data-category="desserts">
+            Desserts
+          </button>
+          <button class="category-btn" data-category="drinks">Drinks</button>
+        </div>
+      </header>
+
+      <!-- Special Offers Banner -->
+      <div class="special-offers">
+        <div class="offer-card">
+          <i class="fas fa-percent"></i>
+          <div class="offer-content">
+            <h3>Weekend Special</h3>
+            <p>20% off on all desserts</p>
+          </div>
+        </div>
+        <div class="offer-card">
+          <i class="fas fa-clock"></i>
+          <div class="offer-content">
+            <h3>Happy Hour</h3>
+            <p>3 PM - 6 PM Daily</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Items Section -->
+      <main class="menu-items">
+        <!-- Starters Section -->
+        <section class="menu-section" id="starters">
+          <h2 class="section-title">Starters</h2>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="item-image">
+                <img
+                  src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd"
+                  alt="Fresh Garden Salad"
+                />
+                <div class="item-tag">Chef's Choice</div>
+              </div>
+              <div class="item-details">
+                <div class="item-header">
+                  <h3>Fresh Garden Salad</h3>
+                  <span class="price">$12</span>
+                </div>
+                <p class="description">
+                  Organic mixed greens, cherry tomatoes, cucumber, and
+                  house-made vinaigrette
+                </p>
+                <div class="item-meta">
+                  <span class="dietary"
+                    ><i class="fas fa-leaf"></i> Vegetarian</span
+                  >
+                  <span class="spice-level"
+                    ><i class="fas fa-pepper-hot"></i> Mild</span
+                  >
+                </div>
+                <div class="item-actions">
+                  <button class="add-to-cart">Add to Order</button>
+                  <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-image">
+                <img
+                  src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8"
+                  alt="Truffle Fries"
+                />
+                <div class="item-tag">Popular</div>
+              </div>
+              <div class="item-details">
+                <div class="item-header">
+                  <h3>Truffle Fries</h3>
+                  <span class="price">$14</span>
+                </div>
+                <p class="description">
+                  Hand-cut fries, truffle oil, parmesan, and fresh herbs
+                </p>
+                <div class="item-meta">
+                  <span class="dietary"
+                    ><i class="fas fa-leaf"></i> Vegetarian</span
+                  >
+                  <span class="spice-level"
+                    ><i class="fas fa-pepper-hot"></i> Medium</span
+                  >
+                </div>
+                <div class="item-actions">
+                  <button class="add-to-cart">Add to Order</button>
+                  <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Main Course Section -->
+        <section class="menu-section" id="mains">
+          <h2 class="section-title">Main Course</h2>
+          <div class="menu-grid">
+            <div class="menu-item featured">
+              <div class="item-image">
+                <img
+                  src="https://images.unsplash.com/photo-1544025162-d76694265947"
+                  alt="Grilled Salmon"
+                />
+                <div class="item-tag">Signature Dish</div>
+              </div>
+              <div class="item-details">
+                <div class="item-header">
+                  <h3>Grilled Salmon</h3>
+                  <span class="price">$28</span>
+                </div>
+                <p class="description">
+                  Atlantic salmon, lemon butter sauce, asparagus, and wild rice
+                  pilaf
+                </p>
+                <div class="item-meta">
+                  <span class="dietary"
+                    ><i class="fas fa-fish"></i> Pescatarian</span
+                  >
+                  <span class="spice-level"
+                    ><i class="fas fa-pepper-hot"></i> Mild</span
+                  >
+                </div>
+                <div class="item-actions">
+                  <button class="add-to-cart">Add to Order</button>
+                  <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <div class="item-image">
+                <img
+                  src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1"
+                  alt="Wagyu Steak"
+                />
+                <div class="item-tag">Premium</div>
+              </div>
+              <div class="item-details">
+                <div class="item-header">
+                  <h3>Wagyu Steak</h3>
+                  <span class="price">$45</span>
+                </div>
+                <p class="description">
+                  A5 Japanese Wagyu, truffle mashed potatoes, seasonal
+                  vegetables
+                </p>
+                <div class="item-meta">
+                  <span class="dietary"
+                    ><i class="fas fa-drumstick-bite"></i> Non-Vegetarian</span
+                  >
+                  <span class="spice-level"
+                    ><i class="fas fa-pepper-hot"></i> Mild</span
+                  >
+                </div>
+                <div class="item-actions">
+                  <button class="add-to-cart">Add to Order</button>
+                  <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Desserts Section -->
+        <section class="menu-section" id="desserts">
+          <h2 class="section-title">Desserts</h2>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="item-image">
+                <img
+                  src="https://images.unsplash.com/photo-1551024506-0bccd828d307"
+                  alt="Chocolate Lava Cake"
+                />
+                <div class="item-tag">Sweet Treat</div>
+              </div>
+              <div class="item-details">
+                <div class="item-header">
+                  <h3>Chocolate Lava Cake</h3>
+                  <span class="price">$12</span>
+                </div>
+                <p class="description">
+                  Warm chocolate cake, vanilla ice cream, fresh berries
+                </p>
+                <div class="item-meta">
+                  <span class="dietary"
+                    ><i class="fas fa-leaf"></i> Vegetarian</span
+                  >
+                  <span class="allergen"
+                    ><i class="fas fa-exclamation-circle"></i> Contains
+                    Nuts</span
+                  >
+                </div>
+                <div class="item-actions">
+                  <button class="add-to-cart">Add to Order</button>
+                  <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Additional Features -->
+      <section class="additional-features">
+        <div class="feature-card">
+          <i class="fas fa-utensils"></i>
+          <h3>Private Dining</h3>
+          <p>Book our private room for special occasions</p>
+          <button class="feature-btn">Learn More</button>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Reservations</h3>
+          <p>Make a reservation for your perfect dining experience</p>
+          <button class="feature-btn">Book Now</button>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-gift"></i>
+          <h3>Gift Cards</h3>
+          <p>Give the gift of exceptional dining</p>
+          <button class="feature-btn">Purchase</button>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="menu-footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> info@gourmethaven.com</p>
+          </div>
+          <div class="footer-section">
+            <h4>Hours</h4>
+            <p>Monday - Friday: 11:00 AM - 10:00 PM</p>
+            <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Gourmet Haven. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    >
+  </body>
+</html>
