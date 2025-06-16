@@ -732,7 +732,7 @@ body {
 
 /* Accessibility */
 .theme-toggle {
-  aria-label: "Toggle dark mode";
+  initial-letter: "Toggle dark mode";
 }
 
 /* Focus Styles */
@@ -905,6 +905,36 @@ textarea:focus {
   display: flex;
   gap: 1rem;
   margin-top: auto;
+  flex-wrap: wrap;
+}
+
+.project-links .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.project-links .btn i {
+  font-size: 0.9rem;
+}
+
+.project-links .btn:hover {
+  transform: translateY(-2px);
+}
+
+.project-links .btn-outline:hover i {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3px);
+  }
 }
 
 /* Update timeline styles for better readability */
@@ -973,7 +1003,7 @@ textarea:focus {
 
   .project-links .btn {
     width: 100%;
-    text-align: center;
+    justify-content: center;
   }
 }
 
