@@ -858,7 +858,49 @@ footer::before {
   color: #aaaaaa;
   text-transform: uppercase;
   letter-spacing: 1px;
+  /* Scroll to Top Button */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #00ffcc, #0088ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0a1a;
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+  }
+  .scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 255, 204, 0.5);
+  }
+  /* Section Animation Classes */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+/* media screen usage */
 @media (max-width: 1024px) {
   .footer-content {
     grid-template-columns: 1fr 1fr;
@@ -888,7 +930,7 @@ footer::before {
   }
 }
 
-.particles {
+/* .particles {
   position: fixed;
   top: 0;
   left: 0;
@@ -897,12 +939,12 @@ footer::before {
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
-}
-.particle {
+} */
+/* .particle {
   position: absolute;
   border-radius: 50%;
   animation: float 8s infinite linear;
-}
+} */
 @keyframes float {
   0% {
     transform: translateY(0) scale(1);
@@ -930,46 +972,4 @@ footer::before {
   .hero .container {
     flex-direction: column;
   }
-}
-
-/* Scroll to Top Button */
-.scroll-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(45deg, #00ffcc, #0088ff);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0a0a1a;
-  text-decoration: none;
-  font-size: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
-}
-.scroll-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.scroll-to-top:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 255, 204, 0.5);
-}
-/* Section Animation Classes */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
