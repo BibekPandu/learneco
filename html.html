@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intern</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="block">
+        <h2>Headings</h2>
+        <h1>Instantly correct all language mistakes in your text</h1>
+        <h2>Instantly correct all language mistakes in your text</h2>
+        <h3>Instantly correct all language mistakes in your text</h3>
+        <h4>Instantly correct all language mistakes in your text</h4>
+        <h5>Instantly correct all language mistakes in your text</h5>
+        <h6>Instantly correct all language mistakes in your text</h6>
+      </div>
+
+      <div class="block">
+        <h2>Paragraph</h2>
+        <p>
+          A paragraph is a self-contained unit of discourse in writing dealing
+          with a particular point or idea. Paragraphs are a conventional means
+          of organizing extended segments of prose.
+        </p>
+      </div>
+
+      <div class="block">
+        <h2>Links</h2>
+        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+      </div>
+
+      <div class="block">
+        <h2>Image</h2>
+        <img src="download.jpg" alt="appleimage" />
+      </div>
+
+      <div class="block">
+        <h2>Table</h2>
+        <table>
+          <tr>
+            <th>BIBEK</th>
+            <th>BIBEK</th>
+            <th>BIBEK</th>
+          </tr>
+          <tr>
+            <td>Bikal</td>
+            <td>Bikal</td>
+            <td>Bikal</td>
+          </tr>
+          <tr>
+            <td>Mexico</td>
+            <td>Austria</td>
+            <td>Canada</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="block">
+        <h2>Lists</h2>
+        <h3>Ordered List</h3>
+        <ol>
+          <li>Apple</li>
+          <li>Ball</li>
+          <li>Cat</li>
+        </ol>
+        <h3>Unordered List</h3>
+        <ul>
+          <li>Apple</li>
+          <li>Ball</li>
+          <li>Cat</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h2>Form</h2>
+        <form>
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullname">Full Name:</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              list="name-suggestions"
+            /><br />
+
+            <datalist id="name-suggestions">
+              <option value="John Doe"></option>
+              <option value="Jane Smith"></option>
+              <option value="Robert Johnson"></option>
+            </datalist>
+
+            <label for="bio">Biography:</label>
+            <textarea id="bio" name="bio" rows="4" cols="50">
+Write something about yourself...</textarea
+            ><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required /><br />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" /><br />
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="99" /><br />
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferences</legend>
+
+            <label>Gender:</label><br />
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label><br />
+
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label><br />
+
+            <input type="radio" id="other" name="gender" value="other" />
+            <label for="other">Other</label><br /><br />
+
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+              <optgroup label="North America">
+                <option value="usa">United States</option>
+                <option value="canada">Canada</option>
+                <option value="mexico">Mexico</option>
+              </optgroup>
+              <optgroup label="Europe">
+                <option value="uk">United Kingdom</option>
+                <option value="germany">Germany</option>
+                <option value="france">France</option>
+              </optgroup></select
+            ><br /><br />
+
+            <label>Interests:</label><br />
+            <input
+              type="checkbox"
+              id="developer"
+              name="interest"
+              value="developer"
+            />
+            <label for="developer">I am a developer</label><br />
+
+            <input
+              type="checkbox"
+              id="youtuber"
+              name="interest"
+              value="youtuber"
+            />
+            <label for="youtuber">I am a YouTuber</label><br />
+
+            <input
+              type="checkbox"
+              id="designer"
+              name="interest"
+              value="designer"
+            />
+            <label for="designer">I am a Designer</label><br />
+          </fieldset>
+
+          <fieldset>
+            <legend>Actions</legend>
+            <input type="hidden" name="userid" value="12345" />
+
+            <button type="submit">Submit Form</button>
+            <button type="reset">Reset Form</button>
+
+            <output name="result" for="fullname email"></output>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
