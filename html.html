@@ -174,5 +174,87 @@ Write something about yourself...</textarea
         </form>
       </div>
     </div>
+
+    <!-- nested table -->
+    <h2>Student Record Table (With Nested Details)</h2>
+
+    <table>
+      <tr>
+        <th>Student Name</th>
+        <th>Basic Info</th>
+      </tr>
+
+      <!-- Row 1 -->
+      <tr>
+        <td>Bibek</td>
+        <td>
+          <!-- Nested Table Starts Here -->
+          <table>
+            <tr>
+              <th>Age</th>
+              <th>City</th>
+              <th>Subjects</th>
+            </tr>
+            <tr>
+              <td>22</td>
+              <td>kathmandu</td>
+              <td>
+                <!-- Another nested table inside a nested table -->
+                <table>
+                  <tr>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                  </tr>
+                  <tr>
+                    <td>Math</td>
+                    <td>80</td>
+                  </tr>
+                  <tr>
+                    <td>Science</td>
+                    <td>55</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- Nested Table Ends Here -->
+        </td>
+      </tr>
+
+      <!-- Row 2 -->
+      <tr>
+        <td>Abhishek</td>
+        <td>
+          <!-- Nested Table -->
+          <table>
+            <tr>
+              <th>Age</th>
+              <th>City</th>
+              <th>Subjects</th>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td>pokhara</td>
+              <td>
+                <table class="nested-table">
+                  <tr>
+                    <th>Hobbies</th>
+                    <th>Fav food</th>
+                  </tr>
+                  <tr>
+                    <td>playing</td>
+                    <td>momo</td>
+                  </tr>
+                  <tr>
+                    <td>sleeping</td>
+                    <td>milk tea</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
