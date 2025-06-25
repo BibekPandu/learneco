@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intern</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="Intern.css" />
   </head>
   <body>
     <div class="container">
@@ -255,6 +255,110 @@ Write something about yourself...</textarea
           </table>
         </td>
       </tr>
+    </table>
+    <h2>Student Information with Nested Table</h2>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>
+            <!-- Nested Table Starts -->
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>Age</th>
+                  <th>City</th>
+                  <th>Subjects</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>21</td>
+                  <td>Kathmandu</td>
+                  <td>
+                    <!-- 2nd Level Nested Table -->
+                    <table border="1">
+                      <thead>
+                        <tr>
+                          <th>Subject</th>
+                          <th>Marks</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Math</td>
+                          <td>88</td>
+                        </tr>
+                        <tr>
+                          <td>Science</td>
+                          <td>92</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- Nested Table Ends -->
+          </td>
+        </tr>
+
+        <tr>
+          <td>Jane Smith</td>
+          <td>
+            <!-- Nested Table -->
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>Age</th>
+                  <th>City</th>
+                  <th>Subjects</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>22</td>
+                  <td>Lalitpur</td>
+                  <td>
+                    <table border="1">
+                      <thead>
+                        <tr>
+                          <th>Subject</th>
+                          <th>Marks</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>English</td>
+                          <td>85</td>
+                        </tr>
+                        <tr>
+                          <td>Social</td>
+                          <td>78</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="2">End of Student Records</td>
+        </tr>
+      </tfoot>
     </table>
   </body>
 </html>
