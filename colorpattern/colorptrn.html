@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Palette Gallery | Design Inspiration</title>
+    <link rel="stylesheet" href="colorptrn.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="gallery-header">
+        <h1>Color Palette Gallery</h1>
+        <p class="subtitle">
+          Curated color combinations for your next design project
+        </p>
+        <div class="search-filter">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              placeholder="Search palettes..."
+              id="searchInput"
+            />
+          </div>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="modern">Modern</button>
+            <button class="filter-btn" data-filter="vintage">Vintage</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="neon">Neon</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Quick Color Picker Section -->
+      <section class="quick-color-picker">
+        <h2>Quick Color Picker</h2>
+        <div class="picker-container">
+          <div class="color-inputs">
+            <div class="input-group">
+              <label for="colorPicker">Pick a Color:</label>
+              <input type="color" id="colorPicker" value="#419D78" />
+            </div>
+            <div class="input-group">
+              <label for="hexInput">HEX:</label>
+              <input type="text" id="hexInput" value="#419D78" maxlength="7" />
+            </div>
+            <div class="input-group">
+              <label for="rgbInput">RGB:</label>
+              <input
+                type="text"
+                id="rgbInput"
+                value="rgb(65, 157, 120)"
+                readonly
+              />
+            </div>
+            <div class="input-group">
+              <label for="hslInput">HSL:</label>
+              <input
+                type="text"
+                id="hslInput"
+                value="hsl(162, 41%, 44%)"
+                readonly
+              />
+            </div>
+          </div>
+          <div class="color-preview">
+            <div class="preview-box" id="colorPreview"></div>
+            <div class="preview-text">
+              <div class="text-sample" style="color: var(--preview-color)">
+                Sample Text
+              </div>
+              <div
+                class="text-sample"
+                style="background: var(--preview-color); color: white"
+              >
+                Background
+              </div>
+            </div>
+          </div>
+          <div class="color-suggestions">
+            <h3>Suggested Combinations</h3>
+            <div class="suggestion-grid">
+              <div class="suggestion-box" data-type="analogous">
+                <h4>Analogous</h4>
+                <div class="suggestion-colors" id="analogousColors"></div>
+              </div>
+              <div class="suggestion-box" data-type="complementary">
+                <h4>Complementary</h4>
+                <div class="suggestion-colors" id="complementaryColors"></div>
+              </div>
+              <div class="suggestion-box" data-type="triadic">
+                <h4>Triadic</h4>
+                <div class="suggestion-colors" id="triadicColors"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main class="palette-grid">
+        <!-- Modern Palette -->
+        <article class="palette-card" data-category="modern">
+          <div class="palette-preview">
+            <div class="color-block" style="--color: #2d3047">
+              <span class="color-code">#2D3047</span>
+            </div>
+            <div class="color-block" style="--color: #419d78">
+              <span class="color-code">#419D78</span>
+            </div>
+            <div class="color-block" style="--color: #e0a458">
+              <span class="color-code">#E0A458</span>
+            </div>
+            <div class="color-block" style="--color: #c04cfd">
+              <span class="color-code">#C04CFD</span>
+            </div>
+            <div class="color-block" style="--color: #f7f7f7">
+              <span class="color-code">#F7F7F7</span>
+            </div>
+          </div>
+          <div class="palette-info">
+            <h3>Modern Elegance</h3>
+            <p>A sophisticated blend of deep navy, emerald, gold, and purple</p>
+            <div class="palette-tags">
+              <span class="tag">Modern</span>
+              <span class="tag">Professional</span>
+            </div>
+            <button class="copy-btn" data-palette="modern-elegance">
+              <i class="far fa-copy"></i> Copy Colors
+            </button>
+          </div>
+        </article>
+
+        <!-- Vintage Palette -->
+        <article class="palette-card" data-category="vintage">
+          <div class="palette-preview">
+            <div class="color-block" style="--color: #d4b483">
+              <span class="color-code">#D4B483</span>
+            </div>
+            <div class="color-block" style="--color: #c1666b">
+              <span class="color-code">#C1666B</span>
+            </div>
+            <div class="color-block" style="--color: #e8d6b3">
+              <span class="color-code">#E8D6B3</span>
+            </div>
+            <div class="color-block" style="--color: #8b7355">
+              <span class="color-code">#8B7355</span>
+            </div>
+            <div class="color-block" style="--color: #2c1810">
+              <span class="color-code">#2C1810</span>
+            </div>
+          </div>
+          <div class="palette-info">
+            <h3>Vintage Charm</h3>
+            <p>Warm, earthy tones inspired by classic photography</p>
+            <div class="palette-tags">
+              <span class="tag">Vintage</span>
+              <span class="tag">Warm</span>
+            </div>
+            <button class="copy-btn" data-palette="vintage-charm">
+              <i class="far fa-copy"></i> Copy Colors
+            </button>
+          </div>
+        </article>
+
+        <!-- Nature Palette -->
+        <article class="palette-card" data-category="nature">
+          <div class="palette-preview">
+            <div class="color-block" style="--color: #2a9d8f">
+              <span class="color-code">#2A9D8F</span>
+            </div>
+            <div class="color-block" style="--color: #e9c46a">
+              <span class="color-code">#E9C46A</span>
+            </div>
+            <div class="color-block" style="--color: #f4a261">
+              <span class="color-code">#F4A261</span>
+            </div>
+            <div class="color-block" style="--color: #e76f51">
+              <span class="color-code">#E76F51</span>
+            </div>
+            <div class="color-block" style="--color: #264653">
+              <span class="color-code">#264653</span>
+            </div>
+          </div>
+          <div class="palette-info">
+            <h3>Forest Harmony</h3>
+            <p>Natural colors inspired by forest landscapes</p>
+            <div class="palette-tags">
+              <span class="tag">Nature</span>
+              <span class="tag">Earthy</span>
+            </div>
+            <button class="copy-btn" data-palette="forest-harmony">
+              <i class="far fa-copy"></i> Copy Colors
+            </button>
+          </div>
+        </article>
+
+        <!-- Neon Palette -->
+        <article class="palette-card" data-category="neon">
+          <div class="palette-preview">
+            <div class="color-block" style="--color: #ff00ff">
+              <span class="color-code">#FF00FF</span>
+            </div>
+            <div class="color-block" style="--color: #00ffff">
+              <span class="color-code">#00FFFF</span>
+            </div>
+            <div class="color-block" style="--color: #ffff00">
+              <span class="color-code">#FFFF00</span>
+            </div>
+            <div class="color-block" style="--color: #00ff00">
+              <span class="color-code">#00FF00</span>
+            </div>
+            <div class="color-block" style="--color: #000000">
+              <span class="color-code">#000000</span>
+            </div>
+          </div>
+          <div class="palette-info">
+            <h3>Neon Dreams</h3>
+            <p>Vibrant, electric colors for bold designs</p>
+            <div class="palette-tags">
+              <span class="tag">Neon</span>
+              <span class="tag">Bold</span>
+            </div>
+            <button class="copy-btn" data-palette="neon-dreams">
+              <i class="far fa-copy"></i> Copy Colors
+            </button>
+          </div>
+        </article>
+
+        <!-- Pastel Palette -->
+        <article class="palette-card" data-category="modern">
+          <div class="palette-preview">
+            <div class="color-block" style="--color: #ffb3ba">
+              <span class="color-code">#FFB3BA</span>
+            </div>
+            <div class="color-block" style="--color: #baffc9">
+              <span class="color-code">#BAFFC9</span>
+            </div>
+            <div class="color-block" style="--color: #bae1ff">
+              <span class="color-code">#BAE1FF</span>
+            </div>
+            <div class="color-block" style="--color: #ffffba">
+              <span class="color-code">#FFFFBA</span>
+            </div>
+            <div class="color-block" style="--color: #ffe4ba">
+              <span class="color-code">#FFE4BA</span>
+            </div>
+          </div>
+          <div class="palette-info">
+            <h3>Pastel Paradise</h3>
+            <p>Soft, dreamy colors perfect for gentle designs</p>
+            <div class="palette-tags">
+              <span class="tag">Pastel</span>
+              <span class="tag">Soft</span>
+            </div>
+            <button class="copy-btn" data-palette="pastel-paradise">
+              <i class="far fa-copy"></i> Copy Colors
+            </button>
+          </div>
+        </article>
+
+        <!-- Monochrome Palette -->
+        <article class="palette-card" data-category="modern">
+          <div class="palette-preview">
+            <div class="color-block" style="--color: #000000">
+              <span class="color-code">#000000</span>
+            </div>
+            <div class="color-block" style="--color: #333333">
+              <span class="color-code">#333333</span>
+            </div>
+            <div class="color-block" style="--color: #666666">
+              <span class="color-code">#666666</span>
+            </div>
+            <div class="color-block" style="--color: #999999">
+              <span class="color-code">#999999</span>
+            </div>
+            <div class="color-block" style="--color: #ffffff">
+              <span class="color-code">#FFFFFF</span>
+            </div>
+          </div>
+          <div class="palette-info">
+            <h3>Monochrome Master</h3>
+            <p>Classic black and white with perfect grayscale</p>
+            <div class="palette-tags">
+              <span class="tag">Monochrome</span>
+              <span class="tag">Classic</span>
+            </div>
+            <button class="copy-btn" data-palette="monochrome-master">
+              <i class="far fa-copy"></i> Copy Colors
+            </button>
+          </div>
+        </article>
+      </main>
+
+      <div class="color-info-panel">
+        <div class="panel-header">
+          <h3>Color Information</h3>
+          <button class="close-panel"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="panel-content">
+          <div class="color-details">
+            <div class="color-preview"></div>
+            <div class="color-values">
+              <div class="value-group">
+                <label>HEX</label>
+                <span class="hex-value"></span>
+              </div>
+              <div class="value-group">
+                <label>RGB</label>
+                <span class="rgb-value"></span>
+              </div>
+              <div class="value-group">
+                <label>HSL</label>
+                <span class="hsl-value"></span>
+              </div>
+            </div>
+          </div>
+          <div class="color-suggestions">
+            <h4>Suggested Combinations</h4>
+            <div class="suggestion-colors"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Filter functionality
+      document.querySelectorAll(".filter-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          // Remove active class from all buttons
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach((btn) => btn.classList.remove("active"));
+          // Add active class to clicked button
+          button.classList.add("active");
+
+          const filter = button.dataset.filter;
+          document.querySelectorAll(".palette-card").forEach((card) => {
+            if (filter === "all" || card.dataset.category === filter) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Search functionality
+      document.getElementById("searchInput").addEventListener("input", (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        document.querySelectorAll(".palette-card").forEach((card) => {
+          const title = card.querySelector("h3").textContent.toLowerCase();
+          const description = card.querySelector("p").textContent.toLowerCase();
+          const tags = Array.from(card.querySelectorAll(".tag")).map((tag) =>
+            tag.textContent.toLowerCase()
+          );
+
+          if (
+            title.includes(searchTerm) ||
+            description.includes(searchTerm) ||
+            tags.some((tag) => tag.includes(searchTerm))
+          ) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+
+      // Copy palette functionality
+      document.querySelectorAll(".copy-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          const palette = button.dataset.palette;
+          const colors = Array.from(
+            button.closest(".palette-card").querySelectorAll(".color-code")
+          )
+            .map((span) => span.textContent)
+            .join(", ");
+
+          navigator.clipboard.writeText(colors).then(() => {
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            setTimeout(() => {
+              button.innerHTML = originalText;
+            }, 2000);
+          });
+        });
+      });
+
+      // Color info panel functionality
+      document.querySelectorAll(".color-block").forEach((block) => {
+        block.addEventListener("click", () => {
+          const color = block.style.getPropertyValue("--color");
+          const panel = document.querySelector(".color-info-panel");
+          const preview = panel.querySelector(".color-preview");
+          const hexValue = panel.querySelector(".hex-value");
+          const rgbValue = panel.querySelector(".rgb-value");
+          const hslValue = panel.querySelector(".hsl-value");
+
+          // Convert hex to RGB and HSL
+          const r = parseInt(color.slice(1, 3), 16);
+          const g = parseInt(color.slice(3, 5), 16);
+          const b = parseInt(color.slice(5, 7), 16);
+
+          preview.style.backgroundColor = color;
+          hexValue.textContent = color;
+          rgbValue.textContent = `rgb(${r}, ${g}, ${b})`;
+
+          // Convert to HSL
+          const hsl = rgbToHsl(r, g, b);
+          hslValue.textContent = `hsl(${Math.round(hsl.h)}°, ${Math.round(
+            hsl.s
+          )}%, ${Math.round(hsl.l)}%)`;
+
+          panel.classList.add("active");
+        });
+      });
+
+      // Close panel
+      document.querySelector(".close-panel").addEventListener("click", () => {
+        document.querySelector(".color-info-panel").classList.remove("active");
+      });
+
+      // RGB to HSL conversion function
+      function rgbToHsl(r, g, b) {
+        r /= 255;
+        g /= 255;
+        b /= 255;
+
+        const max = Math.max(r, g, b);
+        const min = Math.min(r, g, b);
+        let h,
+          s,
+          l = (max + min) / 2;
+
+        if (max === min) {
+          h = s = 0;
+        } else {
+          const d = max - min;
+          s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+          switch (max) {
+            case r:
+              h = (g - b) / d + (g < b ? 6 : 0);
+              break;
+            case g:
+              h = (b - r) / d + 2;
+              break;
+            case b:
+              h = (r - g) / d + 4;
+              break;
+          }
+
+          h /= 6;
+        }
+
+        return {
+          h: h * 360,
+          s: s * 100,
+          l: l * 100,
+        };
+      }
+
+      // Quick Color Picker Functionality
+      const colorPicker = document.getElementById("colorPicker");
+      const hexInput = document.getElementById("hexInput");
+      const rgbInput = document.getElementById("rgbInput");
+      const hslInput = document.getElementById("hslInput");
+      const colorPreview = document.getElementById("colorPreview");
+      const previewText = document.querySelector(".preview-text");
+
+      function updateColorValues(color) {
+        // Update HEX
+        hexInput.value = color;
+
+        // Convert to RGB
+        const r = parseInt(color.slice(1, 3), 16);
+        const g = parseInt(color.slice(3, 5), 16);
+        const b = parseInt(color.slice(5, 7), 16);
+        rgbInput.value = `rgb(${r}, ${g}, ${b})`;
+
+        // Convert to HSL
+        const hsl = rgbToHsl(r, g, b);
+        hslInput.value = `hsl(${Math.round(hsl.h)}°, ${Math.round(
+          hsl.s
+        )}%, ${Math.round(hsl.l)}%)`;
+
+        // Update preview
+        document.documentElement.style.setProperty("--preview-color", color);
+        colorPreview.style.backgroundColor = color;
+
+        // Update suggested colors
+        updateSuggestedColors(hsl);
+      }
+
+      function updateSuggestedColors(baseHsl) {
+        // Analogous colors (30 degrees apart)
+        const analogous = [
+          { h: (baseHsl.h + 30) % 360, s: baseHsl.s, l: baseHsl.l },
+          { h: (baseHsl.h - 30 + 360) % 360, s: baseHsl.s, l: baseHsl.l },
+        ];
+
+        // Complementary color (180 degrees)
+        const complementary = [
+          { h: (baseHsl.h + 180) % 360, s: baseHsl.s, l: baseHsl.l },
+        ];
+
+        // Triadic colors (120 degrees apart)
+        const triadic = [
+          { h: (baseHsl.h + 120) % 360, s: baseHsl.s, l: baseHsl.l },
+          { h: (baseHsl.h + 240) % 360, s: baseHsl.s, l: baseHsl.l },
+        ];
+
+        // Update suggestion boxes
+        updateSuggestionBox("analogousColors", analogous);
+        updateSuggestionBox("complementaryColors", complementary);
+        updateSuggestionBox("triadicColors", triadic);
+      }
+
+      function updateSuggestionBox(elementId, colors) {
+        const container = document.getElementById(elementId);
+        container.innerHTML = "";
+
+        colors.forEach((color) => {
+          const hex = hslToHex(color.h, color.s, color.l);
+          const div = document.createElement("div");
+          div.className = "suggestion-color";
+          div.style.backgroundColor = hex;
+          div.title = `Click to select ${hex}`;
+          div.setAttribute("role", "button");
+          div.setAttribute("aria-label", `Select color ${hex}`);
+          div.onclick = () => {
+            colorPicker.value = hex;
+            updateColorValues(hex);
+          };
+          container.appendChild(div);
+        });
+      }
+
+      function hslToHex(h, s, l) {
+        s /= 100;
+        l /= 100;
+        const k = (n) => (n + h / 30) % 12;
+        const a = s * Math.min(l, 1 - l);
+        const f = (n) =>
+          l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
+        return `#${Math.round(255 * f(0))
+          .toString(16)
+          .padStart(2, "0")}${Math.round(255 * f(8))
+          .toString(16)
+          .padStart(2, "0")}${Math.round(255 * f(4))
+          .toString(16)
+          .padStart(2, "0")}`;
+      }
+
+      // Event Listeners
+      colorPicker.addEventListener("input", (e) => {
+        updateColorValues(e.target.value);
+      });
+
+      hexInput.addEventListener("input", (e) => {
+        const value = e.target.value;
+        if (/^#[0-9A-Fa-f]{6}$/.test(value)) {
+          colorPicker.value = value;
+          updateColorValues(value);
+        }
+      });
+
+      hexInput.addEventListener("blur", (e) => {
+        const value = e.target.value;
+        if (!/^#[0-9A-Fa-f]{6}$/.test(value)) {
+          e.target.value = colorPicker.value;
+        }
+      });
+
+      // Initialize with default color
+      updateColorValues(colorPicker.value);
+    </script>
+  </body>
+</html>
