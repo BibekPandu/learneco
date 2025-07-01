@@ -1,0 +1,109 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__nav .nav__list {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav__link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  background-color: #e2ecf8;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Books Section */
+.books {
+  padding: 30px 20px;
+}
+
+.books__title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.books__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.book-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.book-card__image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.book-card__title {
+  font-size: 1.1rem;
+  margin: 10px 0 5px;
+}
+
+.book-card__author {
+  color: #777;
+}
+
+/* Footer */
+.footer {
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
