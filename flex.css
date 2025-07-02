@@ -1,0 +1,29 @@
+.container {
+  height: 900px;
+  background-color: beige;
+  border: 4px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+.box {
+  height: 100px;
+  width: 100px;
+}
+#box1 {
+  background-color: aqua;
+  color: black;
+}
+#box2 {
+  background-color: blue;
+  color: black;
+}
+#box3 {
+  background-color: black;
+  color: white;
+}
+#box4 {
+  background-color: crimson;
+  color: black;
+}
