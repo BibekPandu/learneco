@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 500px;
+  background-color: bisque;
+  display: flex;
+  border: 2px solid rgb(7, 129, 3);
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  color: red;
+  height: 250px;
+  width: 250px;
+  border: 2px solid rgb(175, 111, 111);
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 10px 10px 10px 10px rgb(161, 154, 154);
+}
