@@ -6,5 +6,361 @@
     <title>Document</title>
     <link rel="stylesheet" href="landingpage.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div id="particles-js"></div>
+
+    <div class="cursor-glow"></div>
+
+    <main class="container">
+      <div class="content">
+        <div class="logo-wrapper">
+          <div class="logo">
+            <div class="logo-icon">
+              <i class="fas fa-rocket"></i>
+              <div class="rocket-trail"></div>
+            </div>
+            <h1 class="glitch" data-text="NOVA">NOVA</h1>
+          </div>
+          <div class="logo-subtitle">The Future is Here</div>
+        </div>
+
+        <div class="title-wrapper">
+          <h2 class="title glitch-text" data-text="Something Amazing is Coming">
+            Something Amazing is Coming
+          </h2>
+          <div class="title-decoration">
+            <span></span>
+            <i class="fas fa-star"></i>
+            <span></span>
+          </div>
+        </div>
+
+        <p class="subtitle">
+          We're crafting an extraordinary experience that will revolutionize the
+          way you think about technology.
+        </p>
+
+        <div class="countdown-wrapper">
+          <div class="countdown">
+            <div class="countdown-item">
+              <div class="countdown-circle">
+                <svg>
+                  <circle cx="60" cy="60" r="54"></circle>
+                  <circle cx="60" cy="60" r="54" class="progress"></circle>
+                </svg>
+                <span class="number">24</span>
+              </div>
+              <span class="label">Days</span>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-circle">
+                <svg>
+                  <circle cx="60" cy="60" r="54"></circle>
+                  <circle cx="60" cy="60" r="54" class="progress"></circle>
+                </svg>
+                <span class="number">18</span>
+              </div>
+              <span class="label">Hours</span>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-circle">
+                <svg>
+                  <circle cx="60" cy="60" r="54"></circle>
+                  <circle cx="60" cy="60" r="54" class="progress"></circle>
+                </svg>
+                <span class="number">45</span>
+              </div>
+              <span class="label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-circle">
+                <svg>
+                  <circle cx="60" cy="60" r="54"></circle>
+                  <circle cx="60" cy="60" r="54" class="progress"></circle>
+                </svg>
+                <span class="number">32</span>
+              </div>
+              <span class="label">Seconds</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="features">
+          <div class="feature-item" data-tilt>
+            <div class="feature-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <span>Lightning Fast</span>
+            <div class="feature-hover">
+              <p>
+                Experience unprecedented speed with our cutting-edge technology
+              </p>
+            </div>
+          </div>
+          <div class="feature-item" data-tilt>
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <span>Secure</span>
+            <div class="feature-hover">
+              <p>Your data is protected with military-grade encryption</p>
+            </div>
+          </div>
+          <div class="feature-item" data-tilt>
+            <div class="feature-icon">
+              <i class="fas fa-magic"></i>
+            </div>
+            <span>Innovative</span>
+            <div class="feature-hover">
+              <p>Pushing the boundaries of what's possible</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="notify-form" id="notifyForm">
+          <div class="input-group">
+            <div class="input-wrapper">
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+              <div class="input-border"></div>
+            </div>
+            <button type="submit" class="glow-button">
+              <span>Notify Me</span>
+              <i class="fas fa-paper-plane"></i>
+              <div class="button-glow"></div>
+            </button>
+          </div>
+          <div class="form-message" id="formMessage"></div>
+        </form>
+
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Twitter" data-tilt>
+            <i class="fab fa-twitter"></i>
+            <div class="social-glow"></div>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram" data-tilt>
+            <i class="fab fa-instagram"></i>
+            <div class="social-glow"></div>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn" data-tilt>
+            <i class="fab fa-linkedin-in"></i>
+            <div class="social-glow"></div>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook" data-tilt>
+            <i class="fab fa-facebook-f"></i>
+            <div class="social-glow"></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="floating-elements">
+        <div class="floating-icon" style="--delay: 0s">
+          <i class="fas fa-star"></i>
+          <div class="icon-glow"></div>
+        </div>
+        <div class="floating-icon" style="--delay: 2s">
+          <i class="fas fa-meteor"></i>
+          <div class="icon-glow"></div>
+        </div>
+        <div class="floating-icon" style="--delay: 4s">
+          <i class="fas fa-satellite"></i>
+          <div class="icon-glow"></div>
+        </div>
+        <div class="floating-icon" style="--delay: 6s">
+          <i class="fas fa-moon"></i>
+          <div class="icon-glow"></div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+      // Initialize particles.js
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffcc00" },
+          shape: { type: "circle" },
+          opacity: {
+            value: 0.5,
+            random: true,
+            animation: {
+              enable: true,
+              speed: 1,
+              minimumValue: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 3,
+            random: true,
+            animation: {
+              enable: true,
+              speed: 2,
+              minimumValue: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffcc00",
+            opacity: 0.2,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            random: true,
+            straight: false,
+            outMode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detectsOn: "canvas",
+          events: {
+            onHover: { enable: true, mode: "grab" },
+            onClick: { enable: true, mode: "push" },
+            resize: true,
+          },
+          modes: {
+            grab: { distance: 140, line_linked: { opacity: 0.5 } },
+            push: { particles_nb: 4 },
+          },
+        },
+        retina_detect: true,
+      });
+
+      // Initialize vanilla-tilt
+      VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.2,
+      });
+
+      // Custom cursor effect
+      const cursor = document.querySelector(".cursor-glow");
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+
+      // Form submission handling
+      const form = document.getElementById("notifyForm");
+      const message = document.getElementById("formMessage");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+
+        // Simulate form submission with animation
+        message.textContent = "Thank you! We'll notify you when we launch.";
+        message.className = "form-message success";
+
+        // Add particles effect on form submission
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 100 },
+            color: { value: "#ffcc00" },
+            shape: { type: "circle" },
+            opacity: { value: 1 },
+            size: { value: 3 },
+            move: {
+              enable: true,
+              speed: 6,
+              direction: "top",
+              random: true,
+              straight: false,
+              outMode: "out",
+            },
+          },
+        });
+
+        // Reset form
+        form.reset();
+
+        // Clear message after 3 seconds
+        setTimeout(() => {
+          message.textContent = "";
+          message.className = "form-message";
+        }, 3000);
+      });
+
+      // Animate countdown circles
+      function animateCountdown() {
+        const circles = document.querySelectorAll(
+          ".countdown-circle .progress"
+        );
+        circles.forEach((circle) => {
+          const radius = circle.r.baseVal.value;
+          const circumference = radius * 2 * Math.PI;
+          circle.style.strokeDasharray = `${circumference} ${circumference}`;
+          circle.style.strokeDashoffset = circumference;
+
+          const progress =
+            100 -
+            (parseInt(
+              circle.parentElement.querySelector(".number").textContent
+            ) /
+              100) *
+              100;
+          const offset = circumference - (progress / 100) * circumference;
+          circle.style.strokeDashoffset = offset;
+        });
+      }
+
+      // Animate countdown numbers
+      function animateValue(element, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          element.textContent = Math.floor(progress * (end - start) + start);
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          }
+        };
+        window.requestAnimationFrame(step);
+      }
+
+      // Initialize animations
+      document.querySelectorAll(".countdown-item .number").forEach((number) => {
+        const finalValue = parseInt(number.textContent);
+        animateValue(number, 0, finalValue, 2000);
+      });
+
+      animateCountdown();
+
+      // Update countdown every second
+      setInterval(() => {
+        document
+          .querySelectorAll(".countdown-item .number")
+          .forEach((number) => {
+            let value = parseInt(number.textContent);
+            value = value > 0 ? value - 1 : 59;
+            number.textContent = value.toString().padStart(2, "0");
+            animateCountdown();
+          });
+      }, 1000);
+
+      // Add glitch effect on hover
+      document.querySelectorAll(".glitch").forEach((element) => {
+        element.addEventListener("mouseover", () => {
+          element.classList.add("active");
+        });
+        element.addEventListener("mouseout", () => {
+          element.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
 </html>
