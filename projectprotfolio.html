@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development Journey | Portfolio</title>
+    <link rel="stylesheet" href="projectprotfolio.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-container">
+          <a href="#" class="logo">Web<span>Journey</span></a>
+          <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#learning">Learning</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+          <span class="hero-subtitle">Welcome to my coding journey</span>
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Bibek Pandey</span><br />Web
+            Developer in Training
+          </h1>
+          <p class="hero-description">
+            Passionate about learning web development and creating beautiful
+            websites
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">See My Work</a>
+            <a href="#contact" class="btn btn-outline">Let's Connect</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Yearly Learning</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4+</span>
+              <span class="stat-label">Skills Learned</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-shape"></div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+        <div class="about-content">
+          <div class="about-image" data-aos="fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=500&auto=format&fit=crop&q=60"
+              alt="Profile Picture"
+            />
+          </div>
+          <div class="about-text" data-aos="fade-left">
+            <p>
+              Hello! I'm a passionate beginner web developer currently learning
+              HTML, CSS, and JavaScript. I love creating websites and am excited
+              to grow my skills in web development. My goal is to become a
+              full-stack developer and create meaningful web applications.
+            </p>
+            <div class="skills">
+              <h3>Current Skills</h3>
+              <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Basic JavaScript</li>
+                <li>Responsive Design</li>
+              </ul>
+            </div>
+            <div class="learning">
+              <h3>Currently Learning</h3>
+              <ul class="skills-list">
+                <li>Advanced JavaScript</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>Git & GitHub</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="learning" class="learning-journey">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">My Learning Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">September 2023</span>
+              <h3>Started Learning Web Development</h3>
+              <p>Began my journey with HTML and CSS fundamentals</p>
+              <ul class="timeline-list">
+                <li>Learned HTML structure and semantics</li>
+                <li>Mastered CSS basics and layouts</li>
+                <li>Created my first responsive website</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">February 2024</span>
+              <h3>JavaScript Basics</h3>
+              <p>Started learning JavaScript programming</p>
+              <ul class="timeline-list">
+                <li>Variables, functions, and control flow</li>
+                <li>DOM manipulation</li>
+                <li>Basic event handling</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">March 2024</span>
+              <h3>Current Focus</h3>
+              <p>Building projects and learning new technologies</p>
+              <ul class="timeline-list">
+                <li>Working on personal projects</li>
+                <li>Learning React.js basics</li>
+                <li>Improving responsive design skills</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card" data-aos="fade-up">
+            <img
+              src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&auto=format&fit=crop&q=60"
+              alt="Personal Portfolio"
+            />
+            <div class="project-content">
+              <h3>Personal Portfolio</h3>
+              <p>
+                My first responsive portfolio website built with HTML and CSS.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/BibekPandu/ECOBEES/tree/main/Protfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-small"
+                >
+                  <i class="fas fa-external-link-alt"></i> Code Demo
+                </a>
+                <a
+                  href="https://github.com/BibekPandu/ECOBEES/tree/main/Protfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-small btn-outline"
+                >
+                  <i class="fab fa-github"></i> Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&auto=format&fit=crop&q=60"
+              alt="Weather App"
+            />
+            <div class="project-content">
+              <h3>Weather App</h3>
+              <p>
+                A weather application that displays current weather using an
+                API.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://yourusername.github.io/weather-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-small"
+                >
+                  <i class="fas fa-external-link-alt"></i> Code Demo
+                </a>
+                <a
+                  href="https://github.com/BibekPandu/Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-small btn-outline"
+                >
+                  <i class="fab fa-github"></i> Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <img
+              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&auto=format&fit=crop&q=60"
+              alt="Todo App"
+            />
+            <div class="project-content">
+              <h3>Vehicle Management system</h3>
+              <p>
+                A simple todo list application with JavaScript functionality.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/BibekPandu/Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-small"
+                >
+                  <i class="fas fa-external-link-alt"></i> Code Demo
+                </a>
+                <a
+                  href="https://github.com/BibekPandu/Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-small btn-outline"
+                >
+                  <i class="fab fa-github"></i> Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <img
+              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&auto=format&fit=crop&q=60"
+              alt="Todo App"
+            />
+            <div class="project-content">
+              <h3>User Management system</h3>
+              <p>
+                A simple todo list application with JavaScript functionality.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/BibekPandu/User-management-system"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-small"
+                >
+                  <i class="fas fa-external-link-alt"></i> Code Demo
+                </a>
+                <a
+                  href="https://github.com/BibekPandu/Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-small btn-outline"
+                >
+                  <i class="fab fa-github"></i> Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <br />
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Get in Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p>b.pandusir2003@gmail.com</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p>b.pandusir20031@gmail.com</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Kathmandu ,Nepal</p>
+            </div>
+            <div class="contact-text">
+              <p>
+                I'm currently looking for opportunities to learn and grow.
+                Whether you have a question or just want to say hi, I'll try my
+                best to get back to you!
+              </p>
+            </div>
+          </div>
+          <form class="contact-form" data-aos="fade-left">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+            <br />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3>Let's Learn Together</h3>
+            <p>
+              I'm always excited to connect with fellow developers and learn new
+              things!
+            </p>
+            <div class="social-links"></div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Bibek Pandey. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
