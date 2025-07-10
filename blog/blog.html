@@ -3,7 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal Blog - Thoughts, stories, and ideas"
+    />
+
     <title>Bibek Blog</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- external css link -->
+    <link rel="stylesheet" href="blog.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- headersection -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="nav-content">
+          <a href="#" class="logo">
+            <i class="fas fa-pen-fancy"></i>
+            <span>Bibek's Blog</span>
+          </a>
+          <ul class="nav-links">
+            <li><a href="#" class="nav-link active">Home</a></li>
+            <li><a href="#" class="nav-link">About</a></li>
+            <li><a href="#" class="nav-link">Category</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+          <!-- search button -->
+          <button class="search-btn" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+  </body>
 </html>
