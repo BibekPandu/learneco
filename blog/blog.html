@@ -7,8 +7,7 @@
       name="description"
       content="Personal Blog - Thoughts, stories, and ideas"
     />
-
-    <title>Bibek Blog</title>
+    <title>My Personal Blog</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,28 +22,34 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- external css link -->
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="blog.css" />
   </head>
   <body>
-    <!-- headersection -->
+    <!-- 🔝 1. Navigation (Top Bar / Header) -->
     <header class="header">
       <nav class="nav-container">
         <div class="nav-content">
+          <!-- Logo or Blog Title (left) -->
           <a href="#" class="logo">
             <i class="fas fa-pen-fancy"></i>
-            <span>Bibek's Blog</span>
+            <span>My Blog</span>
           </a>
+
+          <!-- Navigation Links (right) -->
           <ul class="nav-links">
             <li><a href="#" class="nav-link active">Home</a></li>
             <li><a href="#" class="nav-link">About</a></li>
-            <li><a href="#" class="nav-link">Category</a></li>
+            <li><a href="#" class="nav-link">Categories</a></li>
             <li><a href="#" class="nav-link">Contact</a></li>
           </ul>
-          <!-- search button -->
+
+          <!-- Search Icon -->
           <button class="search-btn" aria-label="Search">
             <i class="fas fa-search"></i>
           </button>
+
           <!-- Mobile Menu Button -->
           <button class="mobile-menu-btn" aria-label="Toggle Menu">
             <i class="fas fa-bars"></i>
@@ -52,5 +57,346 @@
         </div>
       </nav>
     </header>
+
+    <!-- Main Content Area -->
+    <div class="main-container">
+      <!-- 📄 2. Main Content Area (Blog Posts) -->
+      <main class="main-content">
+        <article class="blog-post">
+          <div class="post-image">
+            <img
+              src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Blog post image"
+            />
+          </div>
+          <div class="post-content">
+            <h2 class="post-title">
+              <a href="#">The Art of Mindful Living in a Digital World</a>
+            </h2>
+            <div class="post-meta">
+              <span class="post-author">
+                <i class="fas fa-user"></i>
+                Sarah Johnson
+              </span>
+              <span class="post-date">
+                <i class="fas fa-calendar"></i>
+                December 15, 2024
+              </span>
+              <span class="post-category">
+                <i class="fas fa-tag"></i>
+                Lifestyle
+              </span>
+            </div>
+            <p class="post-excerpt">
+              In today's fast-paced digital landscape, finding moments of
+              mindfulness has become more important than ever. This post
+              explores practical strategies for maintaining mental clarity and
+              emotional balance in our increasingly connected world...
+            </p>
+            <a href="#" class="read-more-btn">Read More</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="post-image">
+            <img
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
+              alt="Blog post image"
+            />
+          </div>
+          <div class="post-content">
+            <h2 class="post-title">
+              <a href="#"
+                >Building Scalable Web Applications: A Developer's Guide</a
+              >
+            </h2>
+            <div class="post-meta">
+              <span class="post-author">
+                <i class="fas fa-user"></i>
+                Mike Chen
+              </span>
+              <span class="post-date">
+                <i class="fas fa-calendar"></i>
+                December 12, 2024
+              </span>
+              <span class="post-category">
+                <i class="fas fa-tag"></i>
+                Technology
+              </span>
+            </div>
+            <p class="post-excerpt">
+              Creating web applications that can handle growth and increased
+              user load requires careful planning and implementation. This
+              comprehensive guide covers the essential principles and best
+              practices for building scalable applications...
+            </p>
+            <a href="#" class="read-more-btn">Read More</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="post-image">
+            <img
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Blog post image"
+            />
+          </div>
+          <div class="post-content">
+            <h2 class="post-title">
+              <a href="#"
+                >Sustainable Travel: Exploring the World Responsibly</a
+              >
+            </h2>
+            <div class="post-meta">
+              <span class="post-author">
+                <i class="fas fa-user"></i>
+                Emma Rodriguez
+              </span>
+              <span class="post-date">
+                <i class="fas fa-calendar"></i>
+                December 10, 2024
+              </span>
+              <span class="post-category">
+                <i class="fas fa-tag"></i>
+                Travel
+              </span>
+            </div>
+            <p class="post-excerpt">
+              As global awareness of environmental impact grows, sustainable
+              travel has become more than just a trend—it's a necessity.
+              Discover how to explore the world while minimizing your carbon
+              footprint and supporting local communities...
+            </p>
+            <a href="#" class="read-more-btn">Read More</a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="post-image">
+            <img
+              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Blog post image"
+            />
+          </div>
+          <div class="post-content">
+            <h2 class="post-title">
+              <a href="#"
+                >The Psychology of Color in Design: How Colors Influence User
+                Behavior</a
+              >
+            </h2>
+            <div class="post-meta">
+              <span class="post-author">
+                <i class="fas fa-user"></i>
+                David Kim
+              </span>
+              <span class="post-date">
+                <i class="fas fa-calendar"></i>
+                December 8, 2024
+              </span>
+              <span class="post-category">
+                <i class="fas fa-tag"></i>
+                Design
+              </span>
+            </div>
+            <p class="post-excerpt">
+              Color psychology plays a crucial role in user experience design.
+              Understanding how different colors affect emotions and behavior
+              can help designers create more effective and engaging digital
+              experiences...
+            </p>
+            <a href="#" class="read-more-btn">Read More</a>
+          </div>
+        </article>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <a href="#" class="page-btn active">1</a>
+          <a href="#" class="page-btn">2</a>
+          <a href="#" class="page-btn">3</a>
+          <a href="#" class="page-btn next">
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      </main>
+
+      <!-- 📚 3. Sidebar -->
+      <aside class="sidebar">
+        <!-- About Me Section -->
+        <div class="sidebar-widget about-widget">
+          <h3 class="widget-title">About Me</h3>
+          <div class="about-content">
+            <img
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              alt="Profile image"
+              class="profile-image"
+            />
+            <h4>John Doe</h4>
+            <p>
+              Passionate writer and tech enthusiast sharing thoughts on
+              lifestyle, technology, and everything in between.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="sidebar-widget categories-widget">
+          <h3 class="widget-title">Categories</h3>
+          <ul class="categories-list">
+            <li>
+              <a href="#">Technology <span>(12)</span></a>
+            </li>
+            <li>
+              <a href="#">Lifestyle <span>(8)</span></a>
+            </li>
+            <li>
+              <a href="#">Travel <span>(6)</span></a>
+            </li>
+            <li>
+              <a href="#">Design <span>(4)</span></a>
+            </li>
+            <li>
+              <a href="#">Health <span>(3)</span></a>
+            </li>
+            <li>
+              <a href="#">Business <span>(5)</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Recent Posts -->
+        <div class="sidebar-widget recent-posts-widget">
+          <h3 class="widget-title">Recent Posts</h3>
+          <div class="recent-posts">
+            <div class="recent-post">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                alt="Recent post"
+              />
+              <div class="recent-post-content">
+                <h4><a href="#">10 Productivity Tips for Remote Workers</a></h4>
+                <span class="post-date">Dec 5, 2024</span>
+              </div>
+            </div>
+            <div class="recent-post">
+              <img
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                alt="Recent post"
+              />
+              <div class="recent-post-content">
+                <h4><a href="#">The Future of Artificial Intelligence</a></h4>
+                <span class="post-date">Dec 3, 2024</span>
+              </div>
+            </div>
+            <div class="recent-post">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                alt="Recent post"
+              />
+              <div class="recent-post-content">
+                <h4>
+                  <a href="#">Sustainable Living: Small Changes, Big Impact</a>
+                </h4>
+                <span class="post-date">Nov 30, 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subscribe Form -->
+        <div class="sidebar-widget subscribe-widget">
+          <h3 class="widget-title">Newsletter</h3>
+          <p>
+            Subscribe to get the latest posts and updates delivered to your
+            inbox.
+          </p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Tags -->
+        <div class="sidebar-widget tags-widget">
+          <h3 class="widget-title">Popular Tags</h3>
+          <div class="tags">
+            <a href="#" class="tag">Technology</a>
+            <a href="#" class="tag">Lifestyle</a>
+            <a href="#" class="tag">Travel</a>
+            <a href="#" class="tag">Design</a>
+            <a href="#" class="tag">Productivity</a>
+            <a href="#" class="tag">Health</a>
+            <a href="#" class="tag">Business</a>
+            <a href="#" class="tag">AI</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- 🔻 4. Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About This Blog</h4>
+          <p>
+            A personal space for sharing thoughts, experiences, and insights on
+            technology, lifestyle, and everything that matters in our digital
+            age.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Stay updated with the latest posts.</p>
+          <form class="footer-subscribe">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 My Personal Blog. All rights reserved.</p>
+        <a href="#" class="back-to-top">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="blog-script.js"></script>
   </body>
 </html>
