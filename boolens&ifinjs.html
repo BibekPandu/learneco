@@ -3,92 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>javascript</title>
+    <title>Rock Paper Scissors</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 30px;
+      }
+      button {
+        font-size: 40px;
+        margin: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        background-color: #f0f0f0;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background-color: #ddd;
+      }
+      #result {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: aqua;
+      }
+      #results {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #8f1717;
+      }
+    </style>
   </head>
   <body>
-    <h1>rock paper scissor</h1>
-    <button
-      onclick="
-            const randomNumber = Math.random();
-            let computerMove = '';
+    <h1>✊✋✌ Rock Paper Scissors</h1>
 
-            if (randomNumber >= 0 && randomNumber < 1 / 3) {
-            computerMove = 'rock';
-            } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-            computerMove = 'paper';
-            } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-            computerMove = 'scissor'
-            }
-            let result = '';
-            if (computerMove === 'rock') {
-            result = 'tie.';
-            } else if (computerMove === 'paper') {
-            result = 'you lose';
-            } else if (computerMove === 'scissor') {
-            result = 'you win';
-            }
-            alert(`you chose rock and computer chose ${computerMove}. So you ${result}`);"
-    >
-      rock
-    </button>
-    <button
-      onclick="
-       const randomNumber = Math.random();
-            let computerMove = '';
+    <!-- Buttons with emojis -->
+    <button onclick="playGame('rock')">✊</button>
+    <button onclick="playGame('paper')">✋</button>
+    <button onclick="playGame('scissor')">✌</button>
 
-            if (randomNumber >= 0 && randomNumber < 1 / 3) {
-            computerMove = 'rock';
-            } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-            computerMove = 'paper';
-            } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-            computerMove = 'scissor'
-            }
-            let result = '';
-            if (computerMove === 'rock') {
-            result = 'you win';
-            } else if (computerMove === 'paper') {
-            result = 'Tie';
-            } else if (computerMove === 'scissor') {
-            result = 'you loose';
-            }
-            alert(`you chose paper and computer chose ${computerMove}. So you ${result}`);    
-    "
-    >
-      paper
-    </button>
-    <button
-      onclick="
-     const randomNumber = Math.random();
-            let computerMove = '';
-
-            if (randomNumber >= 0 && randomNumber < 1 / 3) {
-            computerMove = 'rock';
-            } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-            computerMove = 'paper';
-            } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-            computerMove = 'scissor'
-            }
-            let result = '';
-            if (computerMove === 'rock') {
-            result = 'you lose';
-            } else if (computerMove === 'paper') {
-            result = 'You win';
-            } else if (computerMove === 'scissor') {
-            result = 'Tie';
-            }
-            alert(`you chose scissor and computer chose ${computerMove}. So you ${result}`);    "
-    >
-      scisor
-    </button>
+    <p id="results"></p>
 
     <h1>🪙 Coin Toss Game</h1>
     <button onclick="tossCoin()">Toss Coin</button>
     <p id="result"></p>
-
     <script>
-      function rockPaperScissor() {}
+      function playGame(playerChoice) {
+        // Map for emoji display
+        const emojiMap = {
+          rock: "✊",
+          paper: "✋",
+          scissor: "✌",
+        };
 
-      // ...........................
+        // Random computer move
+        const randomNumber = Math.random();
+        let computerMove = "";
+        if (randomNumber < 1 / 3) {
+          computerMove = "rock";
+        } else if (randomNumber < 2 / 3) {
+          computerMove = "paper";
+        } else {
+          computerMove = "scissor";
+        }
+
+        // Determine result
+        let result = "";
+        if (playerChoice === computerMove) {
+          result = "🤝 Tie!";
+        } else if (
+          (playerChoice === "rock" && computerMove === "scissor") ||
+          (playerChoice === "paper" && computerMove === "rock") ||
+          (playerChoice === "scissor" && computerMove === "paper")
+        ) {
+          result = "🎉 You win!";
+        } else {
+          result = "😢 You lose!";
+        }
+
+        // Show result with emojis
+        document.getElementById(
+          "results"
+        ).innerText = `You chose ${emojiMap[playerChoice]}, computer chose ${emojiMap[computerMove]} → ${result}`;
+      }
+      //
       function tossCoin() {
         const randomNumber = Math.random(); // 0 to <1
         let result = "";
