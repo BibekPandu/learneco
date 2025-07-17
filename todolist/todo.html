@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="To-Do List App - Modern UI Design" />
+    <title>To-Do List App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="todo-style.css" />
+  </head>
+  <body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+      <button id="themeBtn" class="theme-btn" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+    <div class="todo-container">
+      <h1 class="app-title">To-Do List</h1>
+      <!-- ✍️ Add Task Input Section -->
+      <form id="todoForm" class="add-task-form" autocomplete="off">
+        <input
+          type="text"
+          id="taskInput"
+          class="task-input"
+          placeholder="What’s your next task?"
+          maxlength="100"
+          required
+        />
+        <button type="submit" class="add-btn" aria-label="Add Task">
+          <i class="fas fa-plus"></i>
+        </button>
+      </form>
+      <!-- 📋 Task List Section -->
+      <ul id="taskList" class="task-list"></ul>
+      <!-- Actions -->
+      <div class="actions">
+        <button id="clearAllBtn" class="clear-all-btn">
+          <i class="fas fa-trash"></i> Clear All
+        </button>
+      </div>
+    </div>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+      <i class="fas fa-save"></i> <span>Saved!</span>
+    </div>
+    <script src="todo-script.js"></script>
+  </body>
+</html>
