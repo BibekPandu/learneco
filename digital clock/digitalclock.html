@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Digital Clock and Timer - Modern UI Design"
+    />
+    <title>Digital Clock & Timer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="digitalclock.css" />
+  </head>
+  <body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+      <button id="themeBtn" class="theme-btn" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <!-- SVG Gradients -->
+    <svg class="defs-only">
+      <defs>
+        <linearGradient
+          id="progressGradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
+          <stop offset="0%" stop-color="#00ff9d" />
+          <stop offset="100%" stop-color="#00e6a0" />
+        </linearGradient>
+        <linearGradient
+          id="progressGradientLight"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
+          <stop offset="0%" stop-color="#2d3748" />
+          <stop offset="100%" stop-color="#4a5568" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- Main Container -->
+    <div class="clock-container">
+      <!-- Mode Switcher -->
+      <div class="mode-switcher">
+        <button class="mode-btn active" data-mode="clock">
+          <i class="fas fa-clock"></i>
+          <span>Clock</span>
+        </button>
+        <button class="mode-btn" data-mode="timer">
+          <i class="fas fa-stopwatch"></i>
+          <span>Timer</span>
+        </button>
+      </div>
+
+      <!-- Real-Time Clock UI -->
+      <div id="clockMode" class="clock-mode active">
+        <div class="time-display">
+          <div class="time" id="currentTime">12:00:00</div>
+          <div class="period" id="currentPeriod">AM</div>
+        </div>
+        <div class="date-display" id="currentDate">
+          Thursday, December 19, 2024
+        </div>
+        <div class="clock-info">
+          <div class="info-item">
+            <i class="fas fa-calendar"></i>
+            <span id="dayOfYear">Day 353</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <span id="weekNumber">Week 51</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Countdown Timer UI -->
+      <div id="timerMode" class="timer-mode">
+        <div class="timer-display">
+          <div class="time" id="timerDisplay">00:00:00</div>
+        </div>
+
+        <!-- Timer Input Fields -->
+        <div class="timer-inputs">
+          <div class="input-group">
+            <label for="hours">Hours</label>
+            <input type="number" id="hours" min="0" max="23" value="0" />
+          </div>
+          <div class="input-group">
+            <label for="minutes">Minutes</label>
+            <input type="number" id="minutes" min="0" max="59" value="0" />
+          </div>
+          <div class="input-group">
+            <label for="seconds">Seconds</label>
+            <input type="number" id="seconds" min="0" max="59" value="0" />
+          </div>
+        </div>
+
+        <!-- Timer Controls -->
+        <div class="timer-controls">
+          <button id="startBtn" class="control-btn start-btn">
+            <i class="fas fa-play"></i>
+            <span>Start</span>
+          </button>
+          <button id="pauseBtn" class="control-btn pause-btn" disabled>
+            <i class="fas fa-pause"></i>
+            <span>Pause</span>
+          </button>
+          <button id="resetBtn" class="control-btn reset-btn">
+            <i class="fas fa-redo"></i>
+            <span>Reset</span>
+          </button>
+        </div>
+
+        <!-- Progress Ring -->
+        <div class="progress-ring">
+          <svg class="progress-svg" width="220" height="220">
+            <circle class="progress-bg" cx="110" cy="110" r="100"></circle>
+            <circle class="progress-fill" cx="110" cy="110" r="100"></circle>
+          </svg>
+          <div class="progress-text">
+            <span id="progressPercent">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Timer Presets -->
+      <div class="timer-presets">
+        <button class="preset-btn" data-time="300">5 min</button>
+        <button class="preset-btn" data-time="600">10 min</button>
+        <button class="preset-btn" data-time="900">15 min</button>
+        <button class="preset-btn" data-time="1800">30 min</button>
+        <button class="preset-btn" data-time="2700">45 min</button>
+        <button class="preset-btn" data-time="3600">60 min</button>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+      <div class="notification-content">
+        <i class="fas fa-bell"></i>
+        <span>Timer Complete!</span>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
